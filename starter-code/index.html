@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+      <title>Frontend Mentor | Password generator app</title>
+
+      <style>
+         @font-face {
+            font-family: "JetBrains Mono";
+            src: url("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+         }
+         body {
+            font-family: "JetBrains Mono";
+         }
+      </style>
+
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div class="container">
+         <!--? Header part -->
+         <div class="ct-heading">
+            <h1>Password Generator</h1>
+         </div>
+         <!--? Password part -->
+         <div class="ct-pwd">
+            <p id="password">P4$5W0rD!</p>
+            <div class="password-img-section">
+               <p id="copy-password"></p>
+               <img src="./assets/images/icon-copy.svg" alt="" id="copy-btn" />
+            </div>
+         </div>
+         <!--? Password Creator Part -->
+         <div class="ct-pwd-creator">
+            <div class="ct-char-length">
+               <p class="char-length">Character Length</p>
+               <p id="charLength"></p>
+            </div>
+            <input type="range" name="" id="slider" min="0" max="20" value="10" />
+            <div class="validation-items">
+               <div class="char-validation">
+                  <input type="checkbox" name="" id="uppercase-check" />
+                  <p>Include Uppercase Letters</p>
+               </div>
+               <div class="char-validation">
+                  <input type="checkbox" name="" id="lowercase-check" />
+                  <p>Include Lowercase Letters</p>
+               </div>
+
+               <div class="char-validation">
+                  <input type="checkbox" name="" id="numbers-check" />
+                  <p>Include Numbers</p>
+               </div>
+               <div class="char-validation">
+                  <input type="checkbox" name="" id="symbols-check" />
+                  <p>Include Symbols</p>
+               </div>
+            </div>
+            <div class="ct-pwd-strength">
+               <p>STRENGTH</p>
+               <div class="ct-pwd-strength-section">
+                  <p id="char-strength"></p>
+                  <div class="block-items">
+                     <span class="blocks" id="first-block"></span
+                     ><span class="blocks" id="second-block"></span
+                     ><span class="blocks" id="third-block"></span
+                     ><span class="blocks" id="fourth-block"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="ct-pwd-button">
+               <button id="generate-btn">
+                  Generate
+                  <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" id="arrow-svg">
+                     <path
+                        fill="#24232C"
+                        d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                     />
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="index.js"></script>
+</html>
